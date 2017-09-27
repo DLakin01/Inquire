@@ -2,10 +2,19 @@
 <html ng-app="inquireChat">
 <head lang="en">
     <meta charset="UTF-8">
-    <title>Bloc Base Project</title>
+    <title>Inquire Chat</title>
+    <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Open+Sans:400,800,600,700,300">
     <link rel="stylesheet" href="/styles/main.css">
 </head>
 <body>
+    <div class="sidebar column" ng-controller="SideBarController as sidebar">
+      <h2 class="title">Inquire Chat</h2>
+      <a class="add-room" ng-click="/*some function*/">
+        <button class="add">New Room</button>
+      </a>
+      <div class="border"></div>
+      <h4 ng-repeat="room in sidebar.rooms">{{ room.$value }}</h4>
+    </div>
     <ui-view></ui-view>
     <!--Angular-->
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
@@ -29,5 +38,7 @@
      </script>
     <!--Application Files-->
     <script src="/scripts/app.js"></script>
+    <script src="/scripts/services/rooms.js"></script>
+    <script src="/scripts/controllers/SideBarCtrl.js"></script>
 </body>
 </html>

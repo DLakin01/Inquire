@@ -8,12 +8,12 @@
       });
 
     $stateProvider
-      .state('home', {
+      /*.state('home', {
         url: '/',
-        controller: 'HomeCtrl as home',
+        controller: 'HomeController as home',
         templateUrl: '/templates/home.html'
-      });
-  }
+      });*/
+  };
 
   angular
     .module('inquireChat', ['ui.router', 'firebase'])
