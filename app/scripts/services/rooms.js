@@ -1,5 +1,5 @@
 (function() {
-  function Room($firebaseArray, $uibModal) {
+  function Room($firebaseArray, $uibModal, $rootScope) {
     var Room = {};
     var ref = firebase.database().ref().child("rooms");
     var rooms = $firebaseArray(ref);
@@ -12,12 +12,12 @@
     *       hosted in FireBase. The function also serves as a barrier between
     *       our application controlers and AngularFire methods.
     */
-    Room.add = function(room) {
-      rooms.$add({$value: "room"});
+    Room.add = function(name) {
+      rooms.$add({$value: name});
     }
 
     Room.open = function() {
-      var modalInstance = $uibModal.open({
+      $rootScope.modalInstance = $uibModal.open({
         animation: true,
         ariaLabelledBy: 'modal-title',
         ariaDescribedBy: 'modal-body',
@@ -26,11 +26,10 @@
       });
     }
 
-
     return Room;
   }
 
   angular
     .module('inquireChat')
-    .factory('Room', ['$firebaseArray', '$uibModal', Room]);
+    .factory('Room', ['$firebaseArray', '$uibModal', '$rootScope', Room]);
 })();

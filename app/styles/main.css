@@ -4,8 +4,8 @@
 
 .sidebar {
   background-color: #758eb7;
-  position: absolute;
-  left: -1;
+  position: fixed;
+  left: 0;
   top: 0;
   bottom: 0;
   width: 22%;

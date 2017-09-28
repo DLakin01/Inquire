@@ -1,11 +1,18 @@
 (function() {
-  function NewRoomCtrl(Room) {
+  function NewRoomCtrl(Room, $rootScope) {
+    var name
     this.room = Room;
-    this.input = "";
-    this.add = Room.add;
+    this.input = "Inquire away";
+    this.close = function() {
+      $rootScope.modalInstance.close();
+    }
+    this.add = function() {
+      Room.add(this.input);
+      this.close();
+    }
   }
 
   angular
     .module('inquireChat')
-    .controller('NewRoomCtrl', ['Room', NewRoomCtrl]);
+    .controller('NewRoomCtrl', ['Room', '$rootScope', NewRoomCtrl]);
 })();
