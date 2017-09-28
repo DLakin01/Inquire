@@ -1,6 +1,7 @@
 (function() {
-  function SideBarCtrl(Room) {
-    this.rooms = Room.all;
+  function SideBarCtrl(Room, Modal) {
+    this.rooms = Room.all;;
+    this.open = Room.open;
   };
 
   angular

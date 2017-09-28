@@ -4,8 +4,8 @@
 
 .sidebar {
   background-color: #758eb7;
-  position: fixed;
-  left: 0;
+  position: absolute;
+  left: -1;
   top: 0;
   bottom: 0;
   width: 22%;
@@ -18,7 +18,7 @@
   font-family: 'Open Sans', serif;
   font-weight: 300;
   font-size: 18px;
-  border: none;
+  box-shadow: -2px 2px 2px #52565b;
 }
 
 .sidebar h2 {
@@ -39,6 +39,73 @@
   font-weight: 500;
   margin-left: 1.5em;
   position: relative;
+}
+
+.modal-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: #000;
+  opacity: 0.5;
+}
+
+.modal {
+  position: fixed;
+  top: 20%;
+  left: 40%;
+  height: 200px;
+  width: 330px;
+  background: #617ba5;
+  z-index: 2;
+  outline: none;
+}
+
+.modal-content .modal-title {
+  font-family: 'Open Sans', serif;
+  font-weight: 400;
+  font-size: 1.4em;
+  margin-left: 30px;
+}
+
+.modal-content .modal-body {
+  font-family: 'Open Sans', serif;
+  font-weight: 300;
+  font-size: 1.2em;
+  margin-left: 30px;
+  border: none;
+}
+
+.modal-content .modal-body .instruction {
+  margin-bottom: 10px;
+}
+
+.modal-content .modal-body .add-room input {
+  line-height: 2.5em;
+  border: solid 2.5px #4e4f5e;
+  box-shadow: inset 0 0 0 1px #707070;
+  font-family: 'Open Sans', sans-serif;
+  margin-bottom: 10px;
+  transition: box-shadow 0.3s, border 0.3s, ease-in;
+}
+
+.modal-content .modal-body .add-room input:focus {
+  border: solid 5px ##393a49;
+  outline: none;
+}
+
+.modal-content .modal-body .add-room .btn {
+  position: relative;
+  border: none;
+  font-size: 1.1em;
+  font-family: 'Open Sans', sans-serif;
+  background-color: #b8bbc1;
+}
+
+.modal-content .modal-body .add-room .btn-room {
+  background-color: #9a9fa8;
+  color: #FFF;
 }
 
 @media (min-width: 40rem) {

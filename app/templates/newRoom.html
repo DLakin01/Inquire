@@ -1,0 +1,13 @@
+<div class="new-room-modal" ng-controller="NewRoomCtrl as $ctrl">
+  <div class="modal-header">
+    <h2 class="modal-title" id="modal-title">Create a New Room</h2>
+  </div>
+  <div class="modal-body" id="modal-body">
+    <h4 class="instruction">Enter a Room Name</h4>
+    <form class="add-room">
+      <input type="text" placeholder="Inquire Away" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Inquire Away'" ng-model="$ctrl.input"><br>
+      <button class="btn" type="button" ng-click="$ctrl.cancel()">Cancel</button>
+      <button class="btn btn-room" type="button" ng-click="$ctrl.add()">Submit</button>
+    </form>
+  </div>
+</div>

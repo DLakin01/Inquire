@@ -1,0 +1,78 @@
+* {
+  box-sizing: border-box;
+}
+
+.sidebar {
+  background-color: #758eb7;
+  position: absolute;
+  left: -1;
+  top: 0;
+  bottom: 0;
+  width: 22%;
+}
+
+.sidebar .add {
+  background-color: rgba(212, 216, 221, .8);
+  display: inline-block;
+  margin: 0 10px 0 10px;
+  font-family: 'Open Sans', serif;
+  font-weight: 300;
+  font-size: 18px;
+  box-shadow: -2px 2px 2px #52565b;
+}
+
+.sidebar h2 {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 300;
+  text-align: center;
+  position: relative;
+  display: inline-block;
+}
+
+.border {
+  border-bottom: 1px solid #dee2e8;
+  margin-top: 10px;
+}
+
+.sidebar h4 {
+  font-family: 'Open Sans', serif;
+  font-weight: 500;
+  margin-left: 1.5em;
+  position: relative;
+}
+
+.modal-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: #000;
+  opacity: 0.5;
+}
+
+.modal-holder {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: transparent;
+  z-index: 2;
+}
+
+@media (min-width: 40rem) {
+  html { font-size: 80% }
+
+  .sidebar h2 {
+    margin-left: 5px;
+  }
+
+  .sidebar .add {
+    margin-bottom: 10px;
+  }
+}
+
+@media (min-width: 1200px) {
+  html {font-size: 100%}
+}

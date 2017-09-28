@@ -1,5 +1,5 @@
 (function() {
-  function Room($firebaseArray, $uibModal) {
+  function Room($firebaseArray) {
     var Room = {};
     var ref = firebase.database().ref().child("rooms");
     var rooms = $firebaseArray(ref);
@@ -13,24 +13,17 @@
     *       our application controlers and AngularFire methods.
     */
     Room.add = function(room) {
-      rooms.$add({$value: "room"});
-    }
-
-    Room.open = function() {
-      var modalInstance = $uibModal.open({
-        animation: true,
-        ariaLabelledBy: 'modal-title',
-        ariaDescribedBy: 'modal-body',
-        templateUrl: 'templates/newRoom.html',
-        //controller: 'NewRoomCtrl as newroom'
+      rooms.$add({$value: "room"}).then(function(ref) {
+        var id = ref.key();
+        console.log("added chat room with id" + id);
+        rooms.$indexFor(id);
       });
     }
-
 
     return Room;
   }
 
   angular
     .module('inquireChat')
-    .factory('Room', ['$firebaseArray', '$uibModal', Room]);
+    .factory('Room', ['$firebaseArray', Room]);
 })();
