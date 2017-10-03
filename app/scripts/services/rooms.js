@@ -1,7 +1,7 @@
 (function() {
   function Room($firebaseArray, $uibModal, $rootScope) {
     var Room = {};
-    var ref = firebase.database().ref().child("rooms");
+    var ref = firebase.database().ref().child("chats");
     var rooms = $firebaseArray(ref);
 
     Room.all = rooms;
@@ -12,9 +12,9 @@
     *       hosted in FireBase. The function also serves as a barrier between
     *       our application controlers and AngularFire methods.
     */
-    Room.add = function(name) {
-      rooms.$add({$value: name});
-    }
+    Room.add = function(obj) {
+      rooms.$add(obj)
+    };
 
     Room.open = function() {
       $rootScope.modalInstance = $uibModal.open({

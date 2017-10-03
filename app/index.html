@@ -2,17 +2,21 @@
 <html ng-app="inquireChat">
 <head lang="en">
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width", initial-scale=1>
     <title>Inquire Chat</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Open+Sans:400,800,600,700,300">
     <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Headland+One">
     <link rel="stylesheet" href="/styles/main.css">
 </head>
 <body>
-    <div class="sidebar column" ng-controller="SideBarController as sidebar">
+    <div class="sidebar column" ng-controller="SideBarCtrl as sidebar">
       <h2 class="title">Inquire Chat</h2>
       <button class="add" type="button" ng-click="sidebar.open()">New Room</button>
       <div class="border"></div>
-      <h4 ng-repeat="room in sidebar.rooms">{{ room.$value }}</h4>
+      <a class="chat-rooms" ui-sref="chat({ roomID: room.title })" ng-repeat="room in sidebar.rooms">
+        <h4>{{ room.title }}</h4>
+      </a>
     </div>
     <ui-view></ui-view>
     <!--Angular-->
@@ -40,7 +44,9 @@
     <!--Application Files-->
     <script src="/scripts/app.js"></script>
     <script src="/scripts/services/rooms.js"></script>
+    <script src="/scripts/services/Message.js"></script>
     <script src="/scripts/controllers/SideBarCtrl.js"></script>
     <script src="/scripts/controllers/NewRoomCtrl.js"></script>
+    <script src="scripts/controllers/ChatCtrl.js"></script>
 </body>
 </html>

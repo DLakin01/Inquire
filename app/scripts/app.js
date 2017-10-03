@@ -8,10 +8,14 @@
       });
 
     $stateProvider
-      /*.state('newroom', {
-        controller: 'NewRoomCtrl as newRoom',
-        templateUrl: '/templates/newRoom.html'
-      });*/
+      .state('chat', {
+        url: '/chat/:roomID',
+        controller: 'ChatCtrl as chat',
+        templateUrl: '/templates/chat.html',
+        params: {
+          roomID: null
+        }
+      });
   };
 
   angular

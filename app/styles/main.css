@@ -3,11 +3,11 @@
 }
 
 .sidebar {
-  background-color: #758eb7;
+  background: linear-gradient(#7289af, #4f6487);
   position: fixed;
   left: 0;
   top: 0;
-  bottom: 0;
+  height: 100%;
   width: 22%;
 }
 
@@ -17,8 +17,12 @@
   margin: 0 10px 0 10px;
   font-family: 'Open Sans', serif;
   font-weight: 300;
-  font-size: 18px;
-  box-shadow: -2px 2px 2px #52565b;
+  font-size: 14px;
+  border-radius: 4px;
+}
+
+.sidebar .add:focus {
+  outline: none;
 }
 
 .sidebar h2 {
@@ -41,6 +45,10 @@
   position: relative;
 }
 
+.chat-rooms {
+  color: #000;
+}
+
 .modal-backdrop {
   position: fixed;
   top: 0;
@@ -53,11 +61,6 @@
 
 .modal {
   position: fixed;
-  top: 20%;
-  left: 40%;
-  height: 200px;
-  width: 330px;
-  background: #617ba5;
   z-index: 2;
   outline: none;
 }
@@ -106,6 +109,37 @@
 .modal-content .modal-body .add-room .btn-room {
   background-color: #9a9fa8;
   color: #FFF;
+}
+
+.chat-container {
+  position: fixed;
+  right: 0;
+  width: 78%;
+  height: 100%;
+}
+
+.chatter {
+  position: relative;
+  width: 100%;
+  height: 20px;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.message-1 {
+  position: relative;
+  padding-left: 20px;
+  width: 100%;
+  height: 50px;
+  background: #bdc3cc;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.message-2 {
+  position: relative;
+  padding-left: 20px;
+  width: 100%;
+  height: 50px;
+  font-family: 'Open Sans', sans-serif;
 }
 
 @media (min-width: 40rem) {
