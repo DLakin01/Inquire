@@ -3,6 +3,7 @@
     this.roomID = $stateParams.roomID;
     this.messages = Message.chats;
 
+
     //will need UNIX timestamp
     //further controller methods to isolate message content, author, date
 
