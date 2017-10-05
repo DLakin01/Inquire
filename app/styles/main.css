@@ -2,11 +2,29 @@
   box-sizing: border-box;
 }
 
+.side-frame {
+  position: fixed;
+  height: 100%;
+  width: 3%;
+  top: 0;
+  left: 0;
+  background: linear-gradient(#000, #424242);
+}
+
+.top-frame {
+  position: fixed;
+  height: 6%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background: linear-gradient(to right, #000, #424242);
+}
+
 .sidebar {
   background: linear-gradient(#7289af, #4f6487);
   position: fixed;
-  left: 0;
-  top: 0;
+  left: 3%;
+  top: 6%;
   height: 100%;
   width: 22%;
 }
@@ -112,34 +130,19 @@
 }
 
 .chat-container {
-  position: fixed;
+  position: absolute;
   right: 0;
-  width: 78%;
-  height: 100%;
+  bottom: 0;
+  width: 72%;
+  height: 94%;
 }
 
-.chatter {
-  position: relative;
-  width: 100%;
-  height: 20px;
-  font-family: 'Open Sans', sans-serif;
-}
-
-.message-1 {
-  position: relative;
-  padding-left: 20px;
-  width: 100%;
-  height: 50px;
-  background: #bdc3cc;
-  font-family: 'Open Sans', sans-serif;
-}
-
-.message-2 {
-  position: relative;
-  padding-left: 20px;
-  width: 100%;
-  height: 50px;
-  font-family: 'Open Sans', sans-serif;
+.message-container .author[index=even] {
+  width: 30px;
+  height: 30px;
+  background-color: #061166;
+  border-radius: 50%;
+  text-align: center center;
 }
 
 @media (min-width: 40rem) {

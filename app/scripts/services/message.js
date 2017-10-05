@@ -1,24 +1,16 @@
 (function() {
-  function Message($firebaseArray) {
+  function Message(firebase, $firebaseArray) {
     var Message = {};
-    var ref = firebase.database().ref().child("messages");
-    var messages = $firebaseArray(ref);
-
-    Message.getMessages = function(roomID) {
-      var discussion = messages;
-      var messageArray = [];
-      for(var i = 0; i < discussion.length; i++) {
-        if(discussion[i].roomID === roomID){
-          messageArray.push(discussion[i]);
-        }
-      }
-      return messageArray;
-    }
+    var messageArray = [];
+    var ref = firebase.database().ref().child('messages');
+    ref.orderByChild('timestamp');
+    Message.chats = $firebaseArray(ref);
+    console.log(Message.chats);
 
     return Message;
   }
 
   angular
     .module('inquireChat')
-    .factory('Message', ['$firebaseArray', Message]);
+    .factory('Message', ['firebase', '$firebaseArray', Message]);
 })();
