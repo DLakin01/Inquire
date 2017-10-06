@@ -8,6 +8,14 @@
       });
 
     $stateProvider
+      .state('landing', {
+      url: '/',
+      controller: 'LandingCtrl as landing',
+      templateUrl: '/templates/landing.html',
+      params: {
+        roomID: null
+      }
+      })
       .state('chat', {
         url: '/chat/:roomID',
         controller: 'ChatCtrl as chat',

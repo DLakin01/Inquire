@@ -11,16 +11,6 @@
     <link rel="stylesheet" href="/styles/main.css">
 </head>
 <body>
-    <div class="side-frame"></div>
-    <div class="top-frame"></div>
-    <div class="sidebar column" ng-controller="SideBarCtrl as sidebar">
-      <h2 class="title">Inquire Chat</h2>
-      <button class="add" type="button" ng-click="sidebar.open()">New Room</button>
-      <div class="border"></div>
-      <a class="chat-rooms" ng-repeat="room in sidebar.rooms" ui-sref="chat({ roomID: room.title })">
-        <h4>{{ room.title }}</h4>
-      </a>
-    </div>
     <ui-view></ui-view>
     <!--Angular-->
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
@@ -49,8 +39,7 @@
     <script src="/scripts/services/rooms.js"></script>
     <script src="/scripts/services/Message.js"></script>
     <script src="/scripts/filters/messageFilter.js"></script>
-    <script src="/scripts/controllers/SideBarCtrl.js"></script>
     <script src="/scripts/controllers/NewRoomCtrl.js"></script>
-    <script src="scripts/controllers/ChatCtrl.js"></script>
+    <script src="/scripts/controllers/LandingCtrl.js"></script>
 </body>
 </html>

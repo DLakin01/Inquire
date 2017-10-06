@@ -5,7 +5,7 @@
 .side-frame {
   position: fixed;
   height: 100%;
-  width: 3%;
+  width: 7%;
   top: 0;
   left: 0;
   background: linear-gradient(#000, #424242);
@@ -13,7 +13,7 @@
 
 .top-frame {
   position: fixed;
-  height: 6%;
+  height: 9%;
   width: 100%;
   top: 0;
   left: 0;
@@ -25,8 +25,9 @@
   position: fixed;
   left: 3%;
   top: 6%;
-  height: 100%;
+  height: 94%;
   width: 22%;
+  border-radius: 50px 0 0 0;
 }
 
 .sidebar .add {
@@ -46,7 +47,7 @@
 .sidebar h2 {
   font-family: 'Open Sans', sans-serif;
   font-weight: 300;
-  text-align: center;
+  padding-left: 20px;
   position: relative;
   display: inline-block;
 }
@@ -65,6 +66,10 @@
 
 .chat-rooms {
   color: #000;
+}
+
+.chat-rooms:hover {
+  cursor: pointer;
 }
 
 .modal-backdrop {
@@ -131,12 +136,78 @@
 
 .chat-container {
   position: absolute;
-  right: 0;
-  bottom: 0;
-  width: 72%;
+  left: 25%;
+  top: 6%;
+  width: 75%;
   height: 94%;
+  background: #FFF;
 }
 
+.chat-container .title {
+  font-family: 'Open Sans', sans-serif;
+  position: relative;
+  text-align: right;
+  margin-right: 20px;
+  font-size: 1.8em;
+  font-weight: 500;
+}
+
+.message-container {
+  width: 90%;
+}
+
+.message-container .author-BF {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  border-radius: 100%;
+  background: #680000;
+}
+
+.message-container .author-TK {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  border-radius: 100%;
+  background: #680000;
+}
+
+.message-container .author-AH {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  border-radius: 100%;
+  background: #8c8c8c;
+}
+
+.message-container .author-EK {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  border-radius: 100%;
+  background: #8c8c8c;
+}
+
+.message-container .initials {
+  display: block;
+  margin-top: 10px;
+  margin-left: 7.5px;
+  color: #FFF;
+}
+
+.message-container .content {
+  display: inline-block;
+  font-family: 'Raleway', serif;
+}
+
+.message-container .timestamp {
+  display: inline-block;
+  font-family: 'Raleway', serif;
+  line-height: .75em;
+  text-align: right;
+  color: rgba(0, 0, 0, 0.6);
+  float: right;
+}
 
 @media (min-width: 40rem) {
   html { font-size: 80% }

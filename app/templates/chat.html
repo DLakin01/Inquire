@@ -1,8 +1,0 @@
-<div class="chat-container">
-  <header class="title">{{ chat.roomID }}</header>
-  <div class="message-container" ng-repeat="message in chat.messages | messageFilter track by $index">
-    <h4 class="author" index="{{ $index }}">{{ message.userInitials }}</h4>
-    <h4 class="content" index="{{ $index }}">{{ message.content }}</h4>
-    <h4 class="timestamp" index="{{ $index }}">{{ message.timestamp * 1000 | date:' h:mm' }}</h4><br>
-  </div>
-</div>
