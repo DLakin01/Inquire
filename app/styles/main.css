@@ -107,7 +107,7 @@
   margin-bottom: 10px;
 }
 
-.modal-content .modal-body .add-room input {
+.modal-content .modal-body input {
   line-height: 2.5em;
   border: solid 2.5px #4e4f5e;
   box-shadow: inset 0 0 0 1px #707070;

@@ -1,9 +1,8 @@
-<div class="login-modal" ng-controller="LoginCtrl as login">
+<div class="login-modal">
   <div class="modal-header">
     <h2 class="modal-title" id="modal-title">Log In To Inquire</h2>
   </div>
   <div class="modal-body" id="modal-body">
-    <h4 class="instruction">Enter your username</h4>
     <form class="log-in">
       <input type="text" ng-focus=" login.input = ''" ng-model="login.input"><br>
       <button class="btn" type="button" ng-click="login.login()">Submit</button>

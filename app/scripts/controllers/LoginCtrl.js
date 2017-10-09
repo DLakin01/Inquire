@@ -1,13 +1,14 @@
 (function() {
-  function LoginCtrl() {
-    this.input = "Enter your username here";
-    this.login = function(this.input) {
-      inquireChatCookies.set(this.input);
-      
+  function LoginCtrl($cookies, firebase, $uibModal, $rootScope) {
+    this.input = "Enter your username";
+    var newUser = this.input;
+    this.login = function(newUser) {
+      $cookies.put('inquireChatCurrentUser', this.input);
+      $rootScope.modalInstance.close();
     }
   }
 
   angular
     .module('inquireChat')
-    .controller('LoginCtrl' ['inquireChatCookies', LoginCtrl]);
+    .controller('LoginCtrl', ['$cookies', 'firebase', '$uibModal', '$rootScope', LoginCtrl]);
 })();
