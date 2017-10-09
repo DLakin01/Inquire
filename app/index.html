@@ -14,6 +14,8 @@
     <ui-view></ui-view>
     <!--Angular-->
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+    <!--Angular Cookies-->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular-cookies.js"></script>
     <!--UI-Router-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.4.2/angular-ui-router.min.js"></script>
     <!--AngularUI Bootstrap-->
@@ -21,8 +23,8 @@
     <!--FireBase-->
     <script src="https://www.gstatic.com/firebasejs/4.3.1/firebase.js"></script>
     <!--AngularFire-->
-     <script src="https://cdn.firebase.com/libs/angularfire/2.3.0/angularfire.min.js"></script>
-     <script>
+    <script src="https://cdn.firebase.com/libs/angularfire/2.3.0/angularfire.min.js"></script>
+    <script>
       // Initialize Firebase
       var config = {
         apiKey: "AIzaSyAmV_6w0L_oJhbVFLu4C_t1dd8YMDA1z4E",
@@ -33,9 +35,10 @@
         messagingSenderId: "254819727998"
       };
      firebase.initializeApp(config);
-     </script>
+    </script>
     <!--Application Files-->
     <script src="/scripts/app.js"></script>
+    <script src="/scripts/services/cookies.js"></script>
     <script src="/scripts/services/rooms.js"></script>
     <script src="/scripts/services/Message.js"></script>
     <script src="/scripts/filters/messageFilter.js"></script>

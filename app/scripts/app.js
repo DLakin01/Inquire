@@ -15,18 +15,10 @@
       params: {
         roomID: null
       }
-      })
-      .state('chat', {
-        url: '/chat/:roomID',
-        controller: 'ChatCtrl as chat',
-        templateUrl: '/templates/chat.html',
-        params: {
-          roomID: null
-        }
-      });
+    });
   };
 
   angular
-    .module('inquireChat', ['ui.router', 'firebase', 'ui.bootstrap'])
+    .module('inquireChat', ['ui.router', 'firebase', 'ui.bootstrap', 'ngCookies'])
     .config(config)
 })();

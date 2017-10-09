@@ -153,7 +153,7 @@
 }
 
 .message-container {
-  width: 90%;
+  width: 95%;
 }
 
 .message-container .author-BF {
@@ -189,7 +189,7 @@
 }
 
 .message-container .initials {
-  display: block;
+  display: inline-block;
   margin-top: 10px;
   margin-left: 7.5px;
   color: #FFF;
@@ -201,11 +201,10 @@
 }
 
 .message-container .timestamp {
-  display: inline-block;
+  display: block;
   font-family: 'Raleway', serif;
-  line-height: .75em;
-  text-align: right;
-  color: rgba(0, 0, 0, 0.6);
+  font-size: .95em;
+  color: rgba(0, 0, 0, 0.3);
   float: right;
 }
 
