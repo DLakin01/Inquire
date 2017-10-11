@@ -160,6 +160,7 @@
   display: inline-block;
   width: 40px;
   height: 40px;
+  margin-left: 12.5px;
   border-radius: 100%;
   background: #680000;
 }
@@ -168,6 +169,7 @@
   display: inline-block;
   width: 40px;
   height: 40px;
+  margin-left: 12.5px;
   border-radius: 100%;
   background: #680000;
 }
@@ -176,6 +178,7 @@
   display: inline-block;
   width: 40px;
   height: 40px;
+  margin-left: 12.5px;
   border-radius: 100%;
   background: #8c8c8c;
 }
@@ -184,6 +187,7 @@
   display: inline-block;
   width: 40px;
   height: 40px;
+  margin-left: 12.5px;
   border-radius: 100%;
   background: #8c8c8c;
 }
@@ -191,13 +195,15 @@
 .message-container .initials {
   display: inline-block;
   margin-top: 10px;
-  margin-left: 7.5px;
+  margin-left: 9.5px;
   color: #FFF;
 }
 
 .message-container .content {
   display: inline-block;
   font-family: 'Raleway', serif;
+  margin-left: 10px;
+  font-size: 1.1em;
 }
 
 .message-container .timestamp {
@@ -206,6 +212,18 @@
   font-size: .95em;
   color: rgba(0, 0, 0, 0.3);
   float: right;
+}
+
+.form-control {
+  position: fixed;
+  bottom: 15px;
+  margin-left: 15px;
+  width: 70% !important;
+  color: rgba(0, 0, 0, 0.3);
+}
+
+.form-control:focus {
+  color: rgba(0, 0, 0, 0.8);
 }
 
 @media (min-width: 40rem) {

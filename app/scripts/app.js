@@ -12,15 +12,11 @@
       url: '/',
       controller: 'LandingCtrl as landing',
       templateUrl: '/templates/landing.html',
-      params: {
-        roomID: null
-      }
     });
   }
 
   function inquireChatCookies($cookies, $uibModal, $rootScope) {
-    $cookies.put('inquireChatCurrentUser', "");
-    var currentUser = $cookies.get('inquireChatCurrentUser');
+    var currentUser = $cookies.get('currentUser');
     if(!currentUser || currentUser === "") {
       $rootScope.modalInstance = $uibModal.open({
         animation: true,

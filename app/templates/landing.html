@@ -1,4 +1,4 @@
-<div>
+<div class="container-fluid">
   <div class="side-frame"></div>
   <div class="top-frame"></div>
   <div class="sidebar column" >
@@ -9,12 +9,15 @@
       <h4>{{ room.title }}</h4>
     </a>
   </div>
-  <div class="chat-container">
+  <div class="chat-container" >
     <header class="title">{{ landing.title }}</header>
     <div class="message-container" ng-repeat="message in landing.messages | messageFilter">
       <h4 class="author-{{ message.userInitials }}"><div class="initials">{{ message.userInitials }}</div></h4>
-      <h4 class="content">{{ message.content }}</h4><br>
       <h4 class="timestamp">{{ message.timestamp * 1000 | date:' h:mm' }}</h4>
+      <h4 class="content">{{ message.content }}</h4>
     </div>
+    <form class="form-inline" ng-show="landing.visible" ng-submit="landing.send(landing.input, landing.title)">
+      <input type="text" id="input" class="form-control" ng-focus=" landing.input= ''" ng-blur=" landing.input='New message'" ng-model="landing.input">
+    </form>
   </div>
 </div>
