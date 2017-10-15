@@ -3,13 +3,14 @@
   <div class="top-frame"></div>
   <div class="sidebar column" >
     <h2 class="title">Inquire Chat</h2>
-    <button class="add" type="button" ng-click="landing.open()">New Room</button>
+    <button class="btn btn-primary add" type="button" ng-click="landing.open()">New Room</button>
     <div class="border"></div>
     <a class="chat-rooms" ng-repeat="room in landing.rooms" ng-click="landing.setRoom(room.title)">
       <h4>{{ room.title }}</h4>
     </a>
   </div>
-  <div class="chat-container" >
+  <div class="chat-container">
+    <img class="bkgrd" ng-show="!landing.visible" src="/assets/images/InquireLogo.png" alt="Inquire Chat Logo">
     <header class="title">{{ landing.title }}</header>
     <div class="message-container" ng-repeat="message in landing.messages | messageFilter">
       <h4 class="author-{{ message.userInitials }}"><div class="initials">{{ message.userInitials }}</div></h4>
@@ -18,6 +19,7 @@
     </div>
     <form class="form-inline" ng-show="landing.visible" ng-submit="landing.send(landing.input, landing.title)">
       <input type="text" id="input" class="form-control" ng-focus=" landing.input= ''" ng-blur=" landing.input='New message'" ng-model="landing.input">
+      <span class="fa fa-smile-o fa-lg" aria-hidden="true"></span>
     </form>
   </div>
 </div>

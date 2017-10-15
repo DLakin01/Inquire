@@ -2,7 +2,7 @@
   function NewRoomCtrl(Room, $rootScope, SideBarCtrl) {
     var name
     this.room = Room;
-    this.input = "Inquire away";
+    this.input = " Inquire away";
     this.close = function() {
       $rootScope.modalInstance.close();
     }

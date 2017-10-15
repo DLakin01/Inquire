@@ -23,7 +23,9 @@
         ariaDescribedBy: 'modal-body',
         ariaLabelledBy: 'modal-title',
         templateUrl: '/templates/login.html',
-        controller: 'LoginCtrl as login'
+        controller: 'LoginCtrl as login',
+        backdrop: 'static',
+        keyboard: false
       });
     }
   }

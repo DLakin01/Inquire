@@ -3,19 +3,12 @@
     var Message = {};
     Message.chat = null;
     var ref = firebase.database().ref().child('messages');
-    var cookies = $cookies.get('currentUser');
-    var initials;
-    if(cookies) {
-      var splitCookie = cookies.split(' ');
-      initials = splitCookie[0].charAt(0) + splitCookie[1].charAt(0);
-    }
+    var initials = $cookies.get('userInitials');
+
 
     Message.setRoom = function(room) {
       var roomRef = ref.orderByChild("roomID").equalTo(room);
       var messageArray = $firebaseArray(roomRef);
-      var cookie = $cookies.get('currentUser');
-      var splitCookie = cookie.split(' ');
-      initials = splitCookie[0].charAt(0) + splitCookie[1].charAt(0);
       return messageArray;
     };
 

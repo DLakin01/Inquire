@@ -31,13 +31,8 @@
 }
 
 .sidebar .add {
-  background-color: rgba(212, 216, 221, .8);
-  display: inline-block;
-  margin: 0 10px 0 10px;
-  font-family: 'Open Sans', serif;
-  font-weight: 300;
   font-size: 14px;
-  border-radius: 4px;
+  margin-left: 28px;
 }
 
 .sidebar .add:focus {
@@ -70,6 +65,12 @@
 
 .chat-rooms:hover {
   cursor: pointer;
+}
+
+.bkgrd {
+  width: 60%;
+  top: 20px;
+  box-sizing: border-box;
 }
 
 .modal-backdrop {
@@ -134,8 +135,12 @@
   color: #FFF;
 }
 
+.log-in:hover {
+  cursor: pointer;
+}
+
 .chat-container {
-  position: absolute;
+  position: fixed;
   left: 25%;
   top: 6%;
   width: 75%;
@@ -192,6 +197,24 @@
   background: #8c8c8c;
 }
 
+.message-container .author-ZZ {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  margin-left: 12.5px;
+  border-radius: 100%;
+  background: #515050;
+}
+
+.message-container .author-DL {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  margin-left: 12.5px;
+  border-radius: 100%;
+  background: #002259;
+}
+
 .message-container .initials {
   display: inline-block;
   margin-top: 10px;
@@ -204,6 +227,8 @@
   font-family: 'Raleway', serif;
   margin-left: 10px;
   font-size: 1.1em;
+  max-width: 700px;
+  word-wrap: normal;
 }
 
 .message-container .timestamp {
@@ -224,6 +249,20 @@
 
 .form-control:focus {
   color: rgba(0, 0, 0, 0.8);
+}
+
+.fa-smile-o {
+  color: rgba(0, 0, 0, 0.45);
+  position: fixed;
+  bottom: 24px;
+  right: 52px;
+  border-radius: 100%;
+  transition: all .5s linear;
+}
+
+.fa-smile-o:hover {
+  color: rgb(0, 0, 0);
+  font-size: 1.5em;
 }
 
 @media (min-width: 40rem) {
