@@ -64,7 +64,7 @@ server.register([Inert], (err) => {
     server.route(routes);
 });
 
-server.start(() => {
+server.start( => {
     server.settings.uri = process.env.HOST ? 'http://' + process.env.HOST + ':' + process.env.PORT : server.settings.uri;
     console.log('Server started at: ' + server.info.uri);
 });
