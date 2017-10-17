@@ -53,7 +53,7 @@ let routes = [
     }
 ]
 
-let server = new Hapi.Server(+process.env.PORT, '0.0.0.0');
+let server = new Hapi.Server();
 server.connection(connection);
 
 server.register([Inert], (err) => {
@@ -64,8 +64,7 @@ server.register([Inert], (err) => {
     server.route(routes);
 });
 
-server.start( => {
-    server.settings.uri = process.env.HOST ? 'http://' + process.env.HOST + ':' + process.env.PORT : server.settings.uri;
+server.start(() => {
     console.log('Server started at: ' + server.info.uri);
 });
 
