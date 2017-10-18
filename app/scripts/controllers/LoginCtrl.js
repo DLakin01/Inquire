@@ -1,5 +1,5 @@
 (function() {
-  function LoginCtrl($cookies, firebase, $uibModal, $rootScope, auth) {
+  function LoginCtrl($cookies, $uibModal, $rootScope, auth) {
     this.newUserName = "Choose your username";
     this.newUserPassword;
     var newName = this.newUserName;
@@ -46,5 +46,5 @@
 
   angular
     .module('inquireChat')
-    .controller('LoginCtrl', ['$cookies', 'firebase', '$uibModal', '$rootScope', 'auth', LoginCtrl]);
+    .controller('LoginCtrl', ['$cookies', '$uibModal', '$rootScope', 'auth', LoginCtrl]);
 })();
