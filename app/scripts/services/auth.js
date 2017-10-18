@@ -1,11 +1,9 @@
 (function() {
-  function auth(firebase, $firebaseAuth) {
-    var auth = $firebaseAuth();
-
-    return auth;
+  function auth($firebaseAuth) {
+    return $firebaseAuth();
   }
 
   angular
     .module('inquireChat')
-    .factory('auth' ['firebase', '$firebaseAuth', auth]);
+    .factory('auth' ['$firebaseAuth', auth]);
 })();

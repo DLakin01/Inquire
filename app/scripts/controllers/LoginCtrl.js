@@ -1,5 +1,5 @@
 (function() {
-  function LoginCtrl($cookies, firebase, $uibModal, $rootScope, $firebaseAuth) {
+  function LoginCtrl($cookies, firebase, $uibModal, $rootScope, auth) {
     this.newUserName = "Choose your username";
     this.newUserPassword;
     var newName = this.newUserName;
@@ -11,10 +11,10 @@
 
     this.newUser = true;
 
-    var auth = $firebaseAuth();
-    console.log(auth);
-
-    this.newUserLogin = function(newName, newWord) {
+    this.newUserLogin = function() {
+      auth.$createUserWithEmailAndPassword(newName, newWord).then(function(firebaseUser) {
+        console.log("User created with uid: " + firebaseUser.uid;);
+      });
       $cookies.put('currentUser', this.newUserName);
       $rootScope.modalInstance.close();
       var initials = prompt("Inquire uses first and last initials to identify its users. What are yours?");
@@ -46,5 +46,5 @@
 
   angular
     .module('inquireChat')
-    .controller('LoginCtrl', ['$cookies', 'firebase', '$uibModal', '$rootScope', '$firebaseAuth', LoginCtrl]);
+    .controller('LoginCtrl', ['$cookies', 'firebase', '$uibModal', '$rootScope', 'auth', LoginCtrl]);
 })();
