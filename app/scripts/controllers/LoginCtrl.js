@@ -15,6 +15,8 @@
     console.log(auth);
 
     this.newUserLogin = function() {
+      console.log(newName);
+      console.log(newWord);
       auth.$createUserWithEmailAndPassword(newName, newWord).then(function(firebaseUser) {
         console.log("User created with uid: " + firebaseUser.uid);
       });
