@@ -13,7 +13,7 @@
 
     this.newUserLogin = function() {
       auth.$createUserWithEmailAndPassword(newName, newWord).then(function(firebaseUser) {
-        console.log("User created with uid: " + firebaseUser.uid;);
+        console.log("User created with uid: " + firebaseUser.uid);
       });
       $cookies.put('currentUser', this.newUserName);
       $rootScope.modalInstance.close();
