@@ -1,9 +1,12 @@
 (function() {
-  function LandingCtrl(Message, Room) {
+  function LandingCtrl(Message, Room, $cookies) {
     this.rooms = Room.all;
+    console.log(this.rooms);
     this.input = "New message";
-    this.send = function(input, title) {
-      Message.send(input, title);
+    this.initials = $cookies.get('userInitials');
+    console.log(this.initials);
+    this.send = function(initials, input, title) {
+      Message.send(initials, input, title);
       this.input = "";
     }
     this.open = Room.open;
@@ -21,5 +24,5 @@
 
   angular
     .module('inquireChat')
-    .controller('LandingCtrl', ['Message', 'Room', LandingCtrl]);
+    .controller('LandingCtrl', ['Message', 'Room', '$cookies', LandingCtrl]);
 })();

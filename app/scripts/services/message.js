@@ -13,6 +13,7 @@
     };
 
     Message.send = function(initials, newMessage, room) {
+      console.log(initials);
       var messageArray = $firebaseArray(ref);
       var messageObj = {
         userInitials: initials,

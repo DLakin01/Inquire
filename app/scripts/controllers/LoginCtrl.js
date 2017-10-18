@@ -22,6 +22,10 @@
 
 
     this.login = function() {
+      console.log(this.userName, this.password)
+      auth.$signInWithEmailAndPassword(this.userName, this.password).then(function(firebaseUser) {
+        console.log(firebaseUser.uid + " logged in");
+      })
       $cookies.put('currentUser', this.userName);
       $rootScope.modalInstance.close();
       var initials = prompt("Inquire uses first and last initials to identify its users. What are yours?");
