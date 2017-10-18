@@ -11,7 +11,7 @@
 
     this.newUser = true;
 
-    var auth = $firebaseAuth;
+    var auth = $firebaseAuth();
     console.log(auth);
 
     this.newUserLogin = function() {
