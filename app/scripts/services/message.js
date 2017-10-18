@@ -3,7 +3,7 @@
     var Message = {};
     Message.chat = null;
     var ref = firebase.database().ref().child('messages');
-    var initials = $cookies.get('userInitials');
+    var initials = $cookies.get('userinitials');
 
 
     Message.setRoom = function(room) {
