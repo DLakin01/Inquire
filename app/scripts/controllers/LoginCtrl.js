@@ -1,7 +1,7 @@
 (function() {
   function LoginCtrl($cookies, $uibModal, $rootScope, $firebaseAuth) {
     this.newUserName = "Choose your username";
-    this.newUserPassword;
+    this.newUserPassword = "";
     var newName = this.newUserName;
     var newWord = this.newUserPassword;
     this.userName = "username";
