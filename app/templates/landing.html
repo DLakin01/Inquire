@@ -17,7 +17,7 @@
       <h4 class="timestamp">{{ message.timestamp * 1000 | date:' h:mm' }}</h4>
       <h4 class="content">{{ message.content }}</h4>
     </div>
-    <form class="form-inline" ng-show="landing.visible" ng-submit="landing.send(landing.input, landing.title)">
+    <form class="form-inline" ng-show="landing.visible" ng-submit="landing.Message.send(message.userInitials, landing.input, landing.title)">
       <input type="text" id="input" class="form-control" ng-focus=" landing.input= ''" ng-blur=" landing.input='New message'" ng-model="landing.input">
       <span class="fa fa-smile-o fa-lg" aria-hidden="true"></span>
     </form>
