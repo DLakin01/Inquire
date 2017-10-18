@@ -1,5 +1,5 @@
 (function() {
-  function LoginCtrl($cookies, $uibModal, $rootScope, auth) {
+  function LoginCtrl($cookies, $uibModal, $rootScope, $firebaseAuth) {
     this.newUserName = "Choose your username";
     this.newUserPassword;
     var newName = this.newUserName;
@@ -10,6 +10,9 @@
     var word = this.password;
 
     this.newUser = true;
+
+    var auth = $firebaseAuth;
+    console.log(auth);
 
     this.newUserLogin = function() {
       auth.$createUserWithEmailAndPassword(newName, newWord).then(function(firebaseUser) {
@@ -46,5 +49,5 @@
 
   angular
     .module('inquireChat')
-    .controller('LoginCtrl', ['$cookies', '$uibModal', '$rootScope', 'auth', LoginCtrl]);
+    .controller('LoginCtrl', ['$cookies', '$uibModal', '$rootScope', '$firebaseAuth', LoginCtrl]);
 })();
