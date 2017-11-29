@@ -13,6 +13,7 @@
     this.messages = [];
     this.title = null;
     this.visible = false;
+    this.image = false
     this.setRoom = function(room) {
       this.title = room;
       Message.chat = room;

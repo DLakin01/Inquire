@@ -3,6 +3,8 @@
     var Message = {};
     Message.chat = null;
     var ref = firebase.database().ref().child('messages');
+    var storage = firebase.storage()
+    var storageRef = storage.ref('WelcomeBitmoji.png')
     var initials = $cookies.get('userinitials');
 
 

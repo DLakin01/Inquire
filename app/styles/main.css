@@ -75,9 +75,11 @@ input {
 }
 
 .bkgrd {
+  top: -100px;
+  margin-bottom: -50px;
+  position: relative;
   width: 60%;
-  top: 20px;
-  box-sizing: border-box;
+
 }
 
 .modal-backdrop {

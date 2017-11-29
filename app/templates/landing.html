@@ -10,15 +10,17 @@
     </a>
   </div>
   <div class="chat-container">
-    <img class="bkgrd" ng-show="!landing.visible" src="/assets/images/InquireLogo.png" alt="Inquire Chat Logo">
-    <header class="title">{{ landing.title }}</header>
+    <div class="row" ng-show="!landing.visible">
+      <img class="bkgrd center-block" src="/assets/images/InquireLogo.png" alt="Inquire Chat Logo">
+    </div>
+    <header class="title" ng-show="landing.visible">{{ landing.title }}</header>
     <br><br><br>
     <div class="message-container row" ng-repeat="message in landing.messages | messageFilter">
       <h4 class="author-{{ message.userInitials }} col-md-2"><div class="initials">{{ message.userInitials }}</div></h4>
-      <h4 class="content col-md-8">{{ message.content | emojify }}</h4>
+      <h4 class="content col-md-8">{{ message.content | emojify | imagify }}</h4>
+      <div ng-show="landing.image">{{ message.image }}</div>
       <h4 class="timestamp col-md-2">{{ message.timestamp * 1000 | date: 'h:mm a' }}</h4>
     </div>
-    <footer class="title"></footer>
   </div>
   <form class="form-inline" ng-show="landing.visible" ng-submit="landing.send(landing.initials, landing.input, landing.title)">
       <input style="word-break: break-all" type="text" id="input" rows="2" class="form-control" placeholder="New message" onfocus="this.placeholder = ''" ng-model="landing.input"></textarea>
