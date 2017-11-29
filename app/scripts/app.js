@@ -31,7 +31,7 @@
   }
 
   angular
-    .module('inquireChat', ['ui.router', 'firebase', 'ui.bootstrap', 'ngCookies'])
+    .module('inquireChat', ['ui.router', 'firebase', 'ui.bootstrap', 'ngCookies', 'ngSanitize', 'vkEmojiPicker', 'mgcrea.ngStrap'])
     .config(config)
     .run(['$cookies', '$uibModal', '$rootScope', inquireChatCookies]);
 })();

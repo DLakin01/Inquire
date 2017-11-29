@@ -9,15 +9,17 @@
   top: 0;
   left: 0;
   background: linear-gradient(#000, #424242);
+  z-index: 100;
 }
 
 .top-frame {
   position: fixed;
-  height: 9%;
+  height: 6%;
   width: 100%;
   top: 0;
   left: 0;
   background: linear-gradient(to right, #000, #424242);
+  z-index: 100;
 }
 
 .sidebar {
@@ -28,6 +30,7 @@
   height: 94%;
   width: 22%;
   border-radius: 50px 0 0 0;
+  z-index: 100;
 }
 
 .sidebar .add {
@@ -141,20 +144,28 @@
 
 .chat-container {
   position: fixed;
+  display: block;
   left: 25%;
   top: 6%;
   width: 75%;
-  height: 94%;
+  height: 84%;
   background: #FFF;
+  overflow: scroll;
 }
 
 .chat-container .title {
   font-family: 'Open Sans', sans-serif;
-  position: relative;
+  position: fixed;
+  display: block;
+  width: 71%;
+  height: 40px;
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0.2));
+  right: 20px;
   text-align: right;
   margin-right: 20px;
   font-size: 1.8em;
   font-weight: 500;
+  z-index: 100;
 }
 
 .message-container {
@@ -242,22 +253,33 @@
 .form-control {
   position: fixed;
   bottom: 15px;
+  right: 85px;
   margin-left: 15px;
-  width: 70% !important;
+  width: 67% !important;
   color: rgba(0, 0, 0, 0.3);
+}
+
+::-webkit-input-placeholder:focus {
+  transition: opacity 0.5s 0.5s ease;
+  opacity: 0;
+}
+
+.buffer {
+  position: fixed;
+  bottom: 9%;
+  width: 100%;
+  height: 30px;
+  background: linear-gradient(to top, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0.1));
 }
 
 .form-control:focus {
   color: rgba(0, 0, 0, 0.8);
 }
 
-.fa-smile-o {
-  color: rgba(0, 0, 0, 0.45);
+.emoji {
   position: fixed;
-  bottom: 24px;
-  right: 52px;
-  border-radius: 100%;
-  transition: all .5s linear;
+  bottom: 17px;
+  right: 100px;
 }
 
 .fa-smile-o:hover {

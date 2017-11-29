@@ -2,7 +2,7 @@
   function LandingCtrl(Message, Room, $cookies) {
     this.rooms = Room.all;
     console.log(this.rooms);
-    this.input = "New message";
+    this.input = "";
     this.initials = $cookies.get('userInitials');
     console.log(this.initials);
     this.send = function(initials, input, title) {

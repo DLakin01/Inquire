@@ -12,14 +12,16 @@
   <div class="chat-container">
     <img class="bkgrd" ng-show="!landing.visible" src="/assets/images/InquireLogo.png" alt="Inquire Chat Logo">
     <header class="title">{{ landing.title }}</header>
+    <br><br><br>
     <div class="message-container" ng-repeat="message in landing.messages | messageFilter">
       <h4 class="author-{{ message.userInitials }}"><div class="initials">{{ message.userInitials }}</div></h4>
-      <h4 class="timestamp">{{ message.timestamp * 1000 | date:' h:mm' }}</h4>
-      <h4 class="content">{{ message.content }}</h4>
+      <h4 class="timestamp">{{ message.timestamp * 1000 | date: 'h:mm a' }}</h4>
+      <h4 class="content">{{ message.content | emojify }}</h4>
     </div>
-    <form class="form-inline" ng-show="landing.visible" ng-submit="landing.send(landing.initials, landing.input, landing.title)">
-      <input type="text" id="input" class="form-control" ng-focus=" landing.input= ''" ng-blur=" landing.input='New message'" ng-model="landing.input">
-      <span class="fa fa-smile-o fa-lg" aria-hidden="true"></span>
-    </form>
+    <footer class="title"></footer>
   </div>
+  <form class="form-inline" ng-show="landing.visible" ng-submit="landing.send(landing.initials, landing.input, landing.title)">
+      <input type="text" id="input" class="form-control" placeholder="New message" onfocus="this.placeholder = ''" ng-model="landing.input">
+      <span class="emoji" emoji-picker="landing.input" placement="top" title="Emoji"></span>
+  </form>
 </div>
