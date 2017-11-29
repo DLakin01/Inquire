@@ -18,7 +18,7 @@
     <div class="message-container row" ng-repeat="message in landing.messages | messageFilter">
       <h4 class="author-{{ message.userInitials }} col-md-2"><div class="initials">{{ message.userInitials }}</div></h4>
       <h4 class="content col-md-8">{{ message.content | emojify | imagify }}</h4>
-      <div ng-show="landing.image">{{ message.image }}</div>
+      <div ng-show="landing.image">{{ message.image }}</div
       <h4 class="timestamp col-md-2">{{ message.timestamp * 1000 | date: 'h:mm a' }}</h4>
     </div>
   </div>
