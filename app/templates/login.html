@@ -1,13 +1,14 @@
 <div>
 <div class="login-modal" ng-show="login.newUser">
   <div class="modal-header">
-    <h2 class="modal-title" id="modal-title">Log in to Inquire</h2>
+    <h2 class="modal-title" id="modal-title">Welcome to Inquire</h2>
   </div>
   <div class="modal-body" id="modal-body">
+    <p>Create a user name and password to join the conversation</p>
     <form class="log-in">
       <input class="input-sm" type="email" ng-focus=" login.newUserName = ''" ng-model="login.newUserName"><br>
-      <input class="input-sm" type="text" placeholder="Create a password" onfocus="setAttribute('placeholder', '')" onblur="setAttribute('placeholder', 'Create a password')" ng-model="login.newUserPassword"><br>
-      <button class="btn btn-sm" type="button" ng-click="login.newUserLogin()">Submit</button>
+      <input class="input-sm" type="password" placeholder="Create a password" onfocus="setAttribute('placeholder', '')" onblur="setAttribute('placeholder', 'Create a password')" ng-model="login.newUserPassword"><br>
+      <button class="btn btn-sm btn-primary" type="button" ng-click="login.newUserLogin()">Submit</button>
     </form>
     <h6>
       Already signed up for Inquire? Click
@@ -21,10 +22,11 @@
     <h2 class="modal-title" id="modal-title">Welcome Back!</h2>
   </div>
   <div class="modal-body" id="modal-body">
+    <p>Please sign in</p>
     <form class="log-in">
       <input class="input-sm" type="email" ng-focus=" login.userName = ''" ng-model="login.userName"><br>
-      <input class="input-sm" type="text" ng-focus=" login.password = ''" ng-model="login.password"><br>
-      <button class="btn btn-sm" type="button" ng-click="login.login()">Submit</button>
+      <input class="input-sm" type="password" ng-focus=" login.password = ''" ng-model="login.password"><br>
+      <button class="btn btn-sm btn-primary" type="button" ng-click="login.login()">Submit</button>
     </form>
     <h6>
       New user? Click
